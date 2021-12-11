@@ -110,7 +110,7 @@ body {
       }
     }
     .card-action {
-      @include displayFlex(column, none, none);
+      @include displayFlex(column, none, stretch);
       align-self: stretch;
       padding-bottom: 0.5em;
       gap: 1.5rem;
