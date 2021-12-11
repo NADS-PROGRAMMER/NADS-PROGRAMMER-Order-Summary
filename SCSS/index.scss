@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+html {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+// Primary
+$paleBlue: hsl(225, 100%, 94%);
+$brightBlue: hsl(245, 75%, 52%);
+
+// Neutral
+$veryPaleBlue: hsl(225, 100%, 98%);
+$desaturatedBlue: hsl(224, 23%, 55%);
+$darkBlue: hsl(223, 47%, 23%);
+
+// Mixins
+@mixin displayFlex($direction, $just-content, $al-items) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $just-content;
+  align-items: $al-items;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  @include displayFlex(column, center, center);
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: $paleBlue;
+
+  padding: 1rem 1.5rem;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+// CARD PHOTO
+.photo-container {
+  img {
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+  }
+}
+
+// Order Summary
+.order-summary {
+  @include displayFlex(column, none, center);
+  background-color: white;
+  box-shadow: 0px 10px 65px -12px $desaturatedBlue;
+  border-radius: 25px;
+  max-width: 26em;
+
+  .order-details {
+    @include displayFlex(column, space-between, center);
+    padding: 1.8rem;
+    gap: 1.5rem;
+
+    .order-title {
+      font-size: 1.4rem;
+      color: $darkBlue;
+      font-weight: 900;
+    }
+
+    .order-desc {
+      font-weight: 500;
+      font-size: 1rem;
+      text-align: justify;
+      text-align: center;
+      color: $desaturatedBlue;
+      line-height: 1.5rem;
+    }
+
+    .order-payment {
+      @include displayFlex(row, space-between, center);
+      background: $veryPaleBlue;
+      padding: 1rem;
+      border-radius: 15px;
+      align-self: stretch;
+
+      .order-payment-details {
+        @include displayFlex(row, none, center);
+        gap: 1rem;
+
+        section {
+          @include displayFlex(column, none, none);
+          gap: 0.3rem;
+
+          .annual-plan {
+            font-size: 0.9rem;
+            color: $darkBlue;
+            font-weight: 700;
+          }
+
+          .annual-price {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: $desaturatedBlue;
+          }
+        }
+      }
+
+      a {
+        font-size: 0.8rem;
+        color: $brightBlue;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      a:hover {
+        color: hsl(245, 75%, 72%);
+        text-decoration: none;
+      }
+    }
+    .card-action {
+      @include displayFlex(column, none, stretch);
+      padding-bottom: 0.5em;
+      gap: 1.5rem;
+
+      .proceed-button {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        font-weight: 900;
+        background-color: $brightBlue;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        cursor: pointer;
+        box-shadow: 0px 15px 30px hsl(245, 75%, 85%);
+      }
+
+      .proceed-button:hover {
+        background: hsl(245, 75%, 72%);
+        outline: none;
+      }
+      .cancel-button {
+        outline: none;
+        border: none;
+        font-size: 0.9rem;
+        font-weight: 900;
+        color: $desaturatedBlue;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      .cancel-button:hover {
+        color: $darkBlue;
+        outline: none;
+      }
+    }
+  }
+}
+
+// Attribution
+.attribution {
+  padding: 1rem 0;
+  font-size: 1rem;
+  a {
+    text-decoration: none;
+    color: $brightBlue;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+
+  .order-summary .order-details {
+    padding: 1.8rem 3rem;
+  }
+}

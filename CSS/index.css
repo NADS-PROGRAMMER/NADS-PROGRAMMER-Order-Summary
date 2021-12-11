@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+html {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #e0e8ff;
+  padding: 1rem 1.5rem;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.photo-container img {
+  width: 100%;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.order-summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  -webkit-box-shadow: 0px 10px 65px -12px #7280a7;
+          box-shadow: 0px 10px 65px -12px #7280a7;
+  border-radius: 25px;
+  max-width: 26em;
+}
+
+.order-summary .order-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.8rem;
+  gap: 1.5rem;
+}
+
+.order-summary .order-details .order-title {
+  font-size: 1.4rem;
+  color: #1f2f56;
+  font-weight: 900;
+}
+
+.order-summary .order-details .order-desc {
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: justify;
+  text-align: center;
+  color: #7280a7;
+  line-height: 1.5rem;
+}
+
+.order-summary .order-details .order-payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f5f7ff;
+  padding: 1rem;
+  border-radius: 15px;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.order-summary .order-details .order-payment .order-payment-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.order-summary .order-details .order-payment .order-payment-details section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  gap: 0.3rem;
+}
+
+.order-summary .order-details .order-payment .order-payment-details section .annual-plan {
+  font-size: 0.9rem;
+  color: #1f2f56;
+  font-weight: 700;
+}
+
+.order-summary .order-details .order-payment .order-payment-details section .annual-price {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #7280a7;
+}
+
+.order-summary .order-details .order-payment a {
+  font-size: 0.8rem;
+  color: #3829e0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.order-summary .order-details .order-payment a:hover {
+  color: #8b82ed;
+  text-decoration: none;
+}
+
+.order-summary .order-details .card-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding-bottom: 0.5em;
+  gap: 1.5rem;
+}
+
+.order-summary .order-details .card-action .proceed-button {
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 900;
+  background-color: #3829e0;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 15px 30px #c1bcf5;
+          box-shadow: 0px 15px 30px #c1bcf5;
+}
+
+.order-summary .order-details .card-action .proceed-button:hover {
+  background: #8b82ed;
+  outline: none;
+}
+
+.order-summary .order-details .card-action .cancel-button {
+  outline: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: #7280a7;
+  background: transparent;
+  cursor: pointer;
+}
+
+.order-summary .order-details .card-action .cancel-button:hover {
+  color: #1f2f56;
+  outline: none;
+}
+
+.attribution {
+  padding: 1rem 0;
+  font-size: 1rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #3829e0;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+  .order-summary .order-details {
+    padding: 1.8rem 3rem;
+  }
+}
