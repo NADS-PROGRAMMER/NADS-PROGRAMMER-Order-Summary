@@ -41,15 +41,6 @@ body {
   height: 100vh;
 }
 
-// CARD PHOTO
-.photo-container {
-  img {
-    width: 100%;
-    border-radius: 25px 25px 0px 0px;
-  }
-}
-
-// Order Summary
 .order-summary {
   @include displayFlex(column, none, center);
   background-color: white;
@@ -119,10 +110,10 @@ body {
       }
     }
     .card-action {
-      @include displayFlex(column, none, stretch);
+      @include displayFlex(column, none, none);
+      align-self: stretch;
       padding-bottom: 0.5em;
       gap: 1.5rem;
-
       .proceed-button {
         padding: 0.8rem;
         font-size: 0.9rem;
@@ -157,8 +148,13 @@ body {
     }
   }
 }
+.photo-container {
+  img {
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+  }
+}
 
-// Attribution
 .attribution {
   padding: 1rem 0;
   font-size: 1rem;

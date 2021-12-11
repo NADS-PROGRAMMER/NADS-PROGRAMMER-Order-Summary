@@ -35,11 +35,6 @@ body {
   height: 100vh;
 }
 
-.photo-container img {
-  width: 100%;
-  border-radius: 25px 25px 0px 0px;
-}
-
 .order-summary {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,9 +179,11 @@ body {
   -webkit-box-pack: none;
       -ms-flex-pack: none;
           justify-content: none;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
   padding-bottom: 0.5em;
   gap: 1.5rem;
 }
@@ -223,6 +220,11 @@ body {
 .order-summary .order-details .card-action .cancel-button:hover {
   color: #1f2f56;
   outline: none;
+}
+
+.photo-container img {
+  width: 100%;
+  border-radius: 25px 25px 0px 0px;
 }
 
 .attribution {
