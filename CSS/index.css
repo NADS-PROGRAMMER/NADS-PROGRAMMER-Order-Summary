@@ -75,7 +75,7 @@ body {
 }
 
 .order-summary .order-details .order-title {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   color: #1f2f56;
   font-weight: 900;
 }
@@ -242,7 +242,17 @@ body {
   body {
     background-image: url("../images/pattern-background-desktop.svg");
   }
+  .order-summary {
+    height: 40em;
+  }
   .order-summary .order-details {
     padding: 1.8rem 3rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+  }
+  .order-summary .order-details .order-title {
+    font-size: 1.7rem;
   }
 }
