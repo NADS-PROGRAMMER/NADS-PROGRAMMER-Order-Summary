@@ -54,7 +54,7 @@ body {
     gap: 1.5rem;
 
     .order-title {
-      font-size: 1.4rem;
+      font-size: 1.7rem;
       color: $darkBlue;
       font-weight: 900;
     }
@@ -109,11 +109,12 @@ body {
         text-decoration: none;
       }
     }
+
     .card-action {
       @include displayFlex(column, none, stretch);
       align-self: stretch;
       padding-bottom: 0.5em;
-      gap: 1.5rem;
+      gap: 1.8rem;
       .proceed-button {
         padding: 0.8rem;
         font-size: 0.9rem;
@@ -170,7 +171,17 @@ body {
     background-image: url("../images/pattern-background-desktop.svg");
   }
 
+  .order-summary {
+    height: 40em;
+  }
   .order-summary .order-details {
     padding: 1.8rem 3rem;
+    justify-content: center;
+    // background: red;
+    height: 100%;
+
+    .order-title {
+      font-size: 1.7rem;
+    }
   }
 }
