@@ -185,7 +185,7 @@ body {
   -ms-flex-item-align: stretch;
       align-self: stretch;
   padding-bottom: 0.5em;
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
 
 .order-summary .order-details .card-action .proceed-button {
